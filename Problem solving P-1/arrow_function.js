@@ -14,6 +14,41 @@ const calculateShipping = (orderAmount, shippingFee = 60) => {
     // condition ? ture : false
     return orderAmount >= 1000 ? "Free Shipping" : `Shipping Fee ${shippingFee} Taka`
 };
-console.log(calculateShipping(1200));
-console.log(calculateShipping(500));
-console.log(calculateShipping(500, 100));
+// console.log(calculateShipping(1200));
+// console.log(calculateShipping(500));
+// console.log(calculateShipping(500, 100));
+
+
+// ---------------------------------------------------------
+
+/* Problem 2: Arrow Function with Multiple Conditions
+Write an arrow functin that assigns a grade based on marks.
+90+ -> "A+", 80-89 => "A", 60-79 -> "B", below 60 -> "Fail"
+
+Example : getGrade(95) -> "A+"
+Example : getGrade(82) -> "A"
+Example : getGrade(45) -> "F"
+*/
+
+const getGrade = (mark) =>{
+    // if(typeof mark != 'number'){
+    //     return 'invalid'
+    // }
+    // if(mark >= 90){
+    //     return 'A+';
+    // } else if(mark >= 80){
+    //     return 'A'
+    // } else if(mark >= 60){
+    //     return 'B+'
+    // } else {
+    //     return 'Fail'
+    // }
+    
+
+    // Nested Ternary Operator
+    return typeof mark != 'number' ? 'Invalid' : mark >= 90 ? "A+" : mark >= 80 ? "A" : mark >= 60 ? "B+" : "Fail"
+}
+console.log(getGrade(95));
+console.log(getGrade(82));
+console.log(getGrade('sd'));
+console.log(getGrade(0));
