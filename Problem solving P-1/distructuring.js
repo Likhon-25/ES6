@@ -14,5 +14,27 @@ const responseExtractor = (obj) => {
     age,
   };
 };
-console.log(responseExtractor({ user: { name: "Likhon", age: 20 } }));
-console.log(responseExtractor({ user: { name: "Tanjim" } }));
+// console.log(responseExtractor({ user: { name: "Likhon", age: 20 } }));
+// console.log(responseExtractor({ user: { name: "Tanjim" } }));
+
+//  ------------------------------------------------------
+
+/*
+Problem 2 : Swap $Rest Extractor
+Swap two variables and extract first / rest elements form on array using destructuring , no temp variable
+*/
+
+let a = 5;
+let b = 10;
+
+[b, a] = [a, b];
+// console.log(a,b);
+
+// -------------
+
+let nums = [1,2,3,4,5,9,10]
+let [first, ...rest] = nums;
+console.log(first, rest);
+
+
+
